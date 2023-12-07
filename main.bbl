@@ -1,0 +1,135 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{KOOT2021116798}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cf0d9c25fecebad730f346f35cc2cbc0}{%
+           family={Koot},
+           familyi={K\bibinitperiod},
+           given={Martijn},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3e3a2c654b47ab652149c9331a0622b2}{%
+           family={Wijnhoven},
+           familyi={W\bibinitperiod},
+           given={Fons},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{fullhash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{bibnamehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{authorbibnamehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{authornamehash}{d95408625913ff9dd1105d02546d8c65}
+      \strng{authorfullhash}{d95408625913ff9dd1105d02546d8c65}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0306-2619}
+      \field{journaltitle}{Applied Energy}
+      \field{title}{Usage impact on data center electricity needs: A system dynamic forecasting model}
+      \field{volume}{291}
+      \field{year}{2021}
+      \field{pages}{116798}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.apenergy.2021.116798
+      \endverb
+    \endentry
+    \entry{nafus2021carbonaware}{article}{}
+      \name{author}{3}{}{%
+        {{hash=73e2d9507493cd36b27d7a79909a7691}{%
+           family={Nafus},
+           familyi={N\bibinitperiod},
+           given={Dawn},
+           giveni={D\bibinitperiod}}}%
+        {{hash=df17ded8647426fde03b00fdd3a73082}{%
+           family={Schooler},
+           familyi={S\bibinitperiod},
+           given={Eve\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=654076f2361592823d24f7f9b38c7daf}{%
+           family={Burch},
+           familyi={B\bibinitperiod},
+           given={Karly\bibnamedelima Ann},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ef29ccfaef83fc9d93f27546ec3fda2}
+      \strng{fullhash}{6ef29ccfaef83fc9d93f27546ec3fda2}
+      \strng{bibnamehash}{6ef29ccfaef83fc9d93f27546ec3fda2}
+      \strng{authorbibnamehash}{6ef29ccfaef83fc9d93f27546ec3fda2}
+      \strng{authornamehash}{6ef29ccfaef83fc9d93f27546ec3fda2}
+      \strng{authorfullhash}{6ef29ccfaef83fc9d93f27546ec3fda2}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1996-1073}
+      \field{journaltitle}{Energies}
+      \field{number}{21}
+      \field{title}{Carbon-Responsive Computing: Changing the Nexus between Energy and Computing}
+      \field{volume}{14}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.3390/en14216917
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1996-1073/14/21/6917
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1996-1073/14/21/6917
+      \endverb
+    \endentry
+    \entry{smartgreens}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=0ba17b586f6960488de60b7e821d7e71}{%
+           family={Vasconcelos},
+           familyi={V\bibinitperiod},
+           given={Miguel\bibnamedelimb Felipe\bibnamedelima Silva},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e378e417f28022ff7482c85a45f2da51}{%
+           family={Cordeiro},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d3fb077c694c6b4b0beaf632461259fb}{%
+           family={Dufoss{é}},
+           familyi={D\bibinitperiod},
+           given={Fanny},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ffffd20cb95b5f3f44c447f835b8b30a}
+      \strng{fullhash}{ffffd20cb95b5f3f44c447f835b8b30a}
+      \strng{bibnamehash}{ffffd20cb95b5f3f44c447f835b8b30a}
+      \strng{authorbibnamehash}{ffffd20cb95b5f3f44c447f835b8b30a}
+      \strng{authornamehash}{ffffd20cb95b5f3f44c447f835b8b30a}
+      \strng{authorfullhash}{ffffd20cb95b5f3f44c447f835b8b30a}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{11th International Conference on Smart Cities and Green ICT Systems}
+      \field{title}{Indirect Network Impact on the Energy Consumption in Multi-clouds for Follow-the-renewables Approaches}
+      \field{year}{2022}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

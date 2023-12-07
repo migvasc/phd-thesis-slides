@@ -1,0 +1,560 @@
+\RequirePackage{luatex85}
+\documentclass[Ligatures=TeX,table,svgnames,usetotalslideindicator,compress,10pt]{beamer}
+
+\usepackage{polyglossia}
+
+\setdefaultlanguage{english}
+\disablehyphenation
+\usetheme{metropolis}
+\usepackage{chemformula}
+\setbeamertemplate{section in toc}[sections numbered]
+
+\usepackage[style=verbose          ,backend=biber]{biblatex}
+\usepackage{multimedia}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{amssymb}
+\addbibresource{ref.bib}
+\usepackage{appendixnumberbeamer}
+
+\title{Towards low-carbon globally distributed clouds}
+
+\subtitle{Green Days 2023 @ Lyon}
+
+\author{\textbf{Miguel SILVA VASCONCELOS}$^{1,2}$}
+\institute
+{
+  School of Sciences, Arts, and Humanities, University of São Paulo, Brazil$^{1}$\\
+  Univ. Grenoble Alpes, Inria, CNRS, Grenoble INP, LIG, Grenoble, France$^{2}$\\
+}
+
+\date{Mars 2023}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\begin{frame}{The energy needed for Cloud}
+
+  \begin{center}
+    \begin{figure}
+      \centering
+      \includegraphics[width=.8\textwidth]{images/dc-energy-consumption}
+      \caption{\cite{KOOT2021116798}. Applied Energy, 2021.}
+    \end{figure}
+  \end{center}
+  
+\end{frame}
+
+
+\begin{frame}{Reducing the environmental impact of cloud operations}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        
+      \item Projects already deployed (or in development) by major cloud providers (Amazon AWS, Apple, Facebook, Google, Microsoft)
+      \end{itemize}
+      
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \begin{figure}[!h]
+          \centering
+          \includegraphics[width=\textwidth]{images/google_region_picker.jpeg}
+          \caption{Google's region picker tool.}
+        \end{figure}
+      \end{center}
+    \end{column}
+  \end{columns}
+  
+\end{frame}
+
+\begin{frame}{Renewable energy to reduce the environmental impact of  the clouds}
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{alertblock}{Intermittent nature of renewables}
+        \begin{itemize}
+        \item \emph{time of the day}, \emph{weather}, and \emph{season of the year}
+        \end{itemize}
+      \end{alertblock}
+      \begin{itemize}
+        
+      \item Solar power:
+        \begin{itemize}
+        \item Costs have fallen by 85\% from 2010 to 2019
+        \item Solar irradiation has lower variation than wind speed
+        \end{itemize}
+        
+      \item Lithium-Ion batteries:        
+        \begin{itemize}
+        \item Efficiency in terms of costs, power and energy density, charge and discharge ratio and self-discharge
+
+        \end{itemize}
+      \end{itemize}
+      
+      
+    \end{column}
+    \qquad
+    \begin{column}{0.45\textwidth}
+      \begin{center}
+        \begin{figure}[!h]
+          \centering
+          \includegraphics[width=\textwidth]{images/pv_ghi.pdf}
+          \caption{Solar Irradiation at different locations in 2021.}
+        \end{figure}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Carbon-Responsive Computing}
+  
+  Approaches that are aware of their carbon intensity (carbon aware) and make informed decisions\footfullcite{nafus2021carbonaware}
+  
+  \begin{itemize}
+    
+  \item Follow-the-renewables
+    
+  \item Sizing the DCs renewable infrastructure
+  \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Carbon-Responsive Computing}
+  
+  Approaches that are aware of their carbon intensity (carbon aware) and make informed decisions\footfullcite{nafus2021carbonaware}
+  
+  \begin{itemize}    
+
+  \item \alert{Follow-the-renewables}
+    
+    \begin{itemize}
+      
+    \item Allocates/Migrates the workload to the data centers (DCs) that have more renewable (green) power available
+    \item   Migrating the workload among different DCs generates extra computations proportional to the duration of the migration
+
+    \end{itemize}
+    
+  \item Sizing the DCs renewable infrastructure
+
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Impact of follow-the-renewables  \footfullcite{smartgreens}}  
+
+
+  \begin{columns}    
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}    
+      \item Baselines that do not consider network:
+        \begin{itemize}    
+        \item Migration time \alert{> 100 times longer} 
+        \item Wasted energy could have \alert{powered one of the DCs for 44 hours}
+        \end{itemize}    
+
+      \item Proposed solution:
+        \begin{itemize}    
+        \item Migration algorithm that considers network bandwidth, topology, and the history of usage of the links
+        \item No network congestion and same or lower brown energy consumption
+        \end{itemize}    
+      \end{itemize}
+    \end{column}
+
+
+    \begin{column}{0.4\textwidth}
+      \begin{figure}[!h]
+        \centering
+        \includegraphics[width=\textwidth]{images/topology.png}
+        \caption{DCs and how they are connected in the network.}
+      \end{figure}
+    \end{column}        
+  \end{columns}    
+\end{frame}
+
+
+
+
+\begin{frame}{Carbon-Responsive Computing}
+
+  Approaches that are aware of their carbon intensity (carbon aware) and make informed decisions\footfullcite{nafus2021carbonaware}
+  
+  \begin{itemize}    
+
+  \item Follow-the-renewables
+    
+  \item \alert{Sizing the DCs renewable infrastructure}
+    \begin{itemize}
+      
+    \item Compute the area of solar panels (PVs) in m² and batteries capacity in Wh
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Sizing renewable infrastructures}  
+  \textbf{Data centers:}
+  
+  \begin{itemize}
+
+  \item Infrastructure already built (servers, network)
+  \item Homogeneous (regarding CPU cores)
+  \item Server power consumption: idle and dynamic 
+  \item Intra network power consumption: static 
+  \item Specific Power Usage Effectiveness (PUE) for each DC
+
+  \end{itemize}
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/locations_.pdf}
+    \caption{Selected data centers location (inspired from Microsoft Azure)}
+  \end{figure}  
+\end{frame}
+
+\begin{frame}{Sizing renewable infrastructures}  
+  \textbf{Workload:}
+  
+  \begin{itemize}  
+  \item All tasks must be scheduled and executed on time
+  \item Batch tasks that can be executed in any of the DCs 
+  \item No migration 
+  \item Task execution cannot be delayed
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sizing renewable infrastructures}
+  
+  \textbf{Renewables infrastructure}
+  
+  \begin{itemize}    
+  \item Batteries charge and discharge efficiency, Maximum Depth of Discharge
+  \item PV panels efficiency    
+  \item Carbon emissions from manufacturing (PV: 250 kg \ch{CO2} eq per m², bat: 59 kg \ch{CO2} eq per kWh)
+  \item Lifetime (PV: 30 years, bat: 10 years)      
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}{Sizing renewable infrastructures}
+  
+  \textbf{Local electricity grid}
+  
+  \begin{itemize}
+    
+  \item The energy mix is different at each location
+  \item May have the presence of renewables or low carbon-intensive sources    
+    
+    \begin{table}
+      
+      \caption{Emissions (in g \ch{CO2}-eq/kWh) for using the regular grid. Source for grid emissions: electricityMap, climate-transparency.org.}\label{tab:carbonfootprint} \centering
+
+      \footnotesize
+      \begin{tabular}{|l|r|}
+        
+        \hline
+
+        \textbf{Location} &  \textbf{Emissions }  \\
+        \hline
+        Johannesburg & 900.6  \\
+        \hline
+        Pune & 702.8\\
+        \hline
+        Canberra & 667.0 \\
+        \hline
+        Dubai & 530.0   \\
+        \hline
+        Singapore & 495.0  \\
+        \hline     
+        Seoul & 415.6  \\
+        \hline
+        Virginia  & 342.8  \\
+        \hline
+        São Paulo &  61.7 \\
+        \hline 
+        Paris &  52.6  \\
+        \hline  
+
+      \end{tabular}  
+    \end{table}
+    
+  \end{itemize}
+  \normalsize
+\end{frame}
+
+
+\begin{frame}{Proposed solution}
+  
+  Linear program formulation to minimize the carbon emissions from the cloud federation operation (timespan of 1 year) \footnotemark[2]
+  
+  \begin{itemize}
+    
+  \item Scheduling and dimensioning modeled as single problem
+    \begin{itemize}
+      
+    \item Allocate workload to other DC or increase the battery capacity or PV area?
+    \end{itemize}
+    
+  \item Only real variables 
+    \begin{itemize}     
+    \item  \alert{Optimal} solution in \alert{polynomial time}: 394264 variables, solved in less than \alert{1 minute} with Gurobi
+
+    \end{itemize}
+
+  \end{itemize}
+  
+  
+  
+  \footnotetext[2]{M. Vasconcelos, D. Cordeiro, G. Da Costa, F. Dufossé, J.-M. Nicod, and V. Rehn-Sonigo, ``Optimal sizing of a globally distributed low carbon cloud federation''. \textit{In: 2023 23nd IEEE International Symposium on Cluster, Cloud and Internet Computing (CCGrid), Bengaluru, India, 2023.}}
+\end{frame}
+
+
+\begin{frame}{LP Overview}
+
+  \alert{ Data center power consumption:}
+  
+  \begin{equation}
+    P^d_k \leq Pre^d_k + Pgrid^d_k + Pdch_k^d - Pch_k^d   
+  \end{equation}
+
+
+  where $Pch_k^d$ is the power to charge the battery at each time of time slot $k$ on $DC^d$ and $Pdch_k^d$ is the power to discharge the battery, $Pre^d_k $ is the solar power produced, and $ Pgrid^d_k $ is the power used from the local grid.
+
+  \alert{Workload:}
+  
+  \begin{equation} \label{eq:wk}
+    w_k^d \leq C^d
+  \end{equation}
+  
+  where $w_k^d$ is number of cores needed during the $k$th time slot on $DC^d$,  and  $C^d$ is the number of cores within $DC^d$ .
+  
+\end{frame}
+
+\begin{frame}{LP Overview}
+
+  \alert{Batteries level of energy ($B^d_ k$):} 
+
+  \begin{equation} \label{eq:bdk}
+    B^d_k = B^d_{k-1}  + Pch^d_{k-1} \times \eta_{ch} \times \Delta{t} - \frac{Pdch^d_{k-1}}{\eta_{dch}} \times \Delta{t}
+  \end{equation}
+
+  where $\eta_{ch}$ is efficiency of the charge process and $\eta_{dch}$ is the efficiency of the discharge process.
+
+  \alert{Solar power production:}
+
+  \begin{equation} \label{eq:predk}
+    Pre^d_{k}= I^d_k \times Apv^d \times \eta_{pv}
+  \end{equation}
+
+  where $I^d_k$ is the solar irradiance, $Apv^d$ the PV panel area,  and $\eta_{pv}$ is the efficiency of PV module
+
+\end{frame}
+
+
+\begin{frame}{LP Overview}
+
+
+  \alert{Objective function:}
+  
+  \begin{equation} \label{eq:FPALL}
+    \text{minimize }\sum_{k=0}^{K-1} \sum_{d=1}^D ( FPgrid^d_k +  FPpv^d_k) + \sum_{d=1}^D FPbat^d
+  \end{equation}
+
+\end{frame}
+
+
+\begin{frame}{LP Overview}
+
+  \alert{ Inputs:}
+  
+  \begin{itemize}
+
+  \item Real solar irradiation data from 2021 (MERRA-2)
+  \item Real values from carbon emissions of using local electricity grid, manufacturing PVs and batteries
+  \item Efficiency parameters of PVs and batteries
+  \item Number of DCs, and cores inside each DC
+  \item Power consumption of servers and network devices ( Grid'5000 Taurus, HP ProCurve 2810-48G)
+  \item PUE of each DC
+  \item Workload (based on Google traces)
+
+  \end{itemize}
+  \alert{ Ouptut}
+  \begin{itemize}
+  \item Area of PVs (m²) and capacity of batteries (Wh)   
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Results}
+  \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sizing.pdf}
+    \caption{Optimal result for the area of PV panels and capacity of the batteries.}
+    \label{fig:sizing}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Results}
+
+  \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=.6\textwidth]{images/energy_ratio.pdf}
+    \caption{Composition of the DCs’ daily energy consumption throughout the
+      year considering the different sources of energy}
+    \label{fig:sizing}
+  \end{figure}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Results}
+
+
+  \begin{table}[!ht]
+    \caption{Total emissions for the different scenarios.}\label{tab:emissions} \centering
+    \begin{tabular}{|p{5cm}|r|}
+      \hline
+      \textbf{Scenarios} & \textbf{Emissions (t \ch{CO2}-eq)}   \\
+      \hline
+      Electrical grid                    & 201211.3    \\
+      \hline
+      PV and batteries  &                  42370.6 \\ 
+      \hline
+      PV, batteries, and grid            &  29600.6   \\
+      \hline
+
+
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Results}
+
+\begin{table}[!ht]
+  
+  \caption{Evaluating sizing considering solar irradiation data of different years (2018, 2019, 2020) using the MAPE metric (values are in \%) }\label{tab:years_MAPE} \centering
+
+  \begin{tabular}{|l|r|r|}
+   \hline
+    
+  \textbf{Location} &   \textbf{PV Area} & \textbf{Battery Capacity} \\
+  \hline
+  Johannesburg & 1.72 & 1.64  \\
+  \hline
+  Pune  & 3.72 & 0.76  \\
+  \hline
+  Canberra  & 8.62 & 4.25 \\
+  \hline
+  Dubai   & 2.31 & 2.88   \\
+  \hline
+  Singapore & 7.22 & 0.34 \\
+  \hline     
+  Seoul    & 3.15 & 1.11 \\
+  \hline
+  Virginia   & 2.2 & 0.87 \\
+  \hline
+  São Paulo   & 5.81 & 8.05 \\
+  \hline 
+  Paris    & 2.76 & 0     \\
+  \hline  
+
+\end{tabular}  
+\end{table}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Visualizating data center operation and energy source used}  
+  \begin{itemize}    
+  \item Each circle is a DC, and its radius is the power consumption (in MWh)
+  \item The pizza graph represents the share of electricity source being used at that instant (from pv panels, from the batteries, or from the grid)
+  \item The gray shadow represents the night
+  \item Visualization for the first week of 2021
+  \end{itemize}
+
+  \begin{center}
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=1\textwidth]{images/dc_op_plot.png}
+      \caption{Example of data centers electricity source used.}
+    \end{figure}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Results}
+  \begin{center}
+    \movie[width=8.1cm, height =8.1cm]{Example of DCs electricity source used.}{dc_op.mp4}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Future work}
+  \begin{itemize}
+  \item Robustness of the model
+  \item Consider VM migration of the tasks and other scheduling algorithms
+    \begin{itemize}
+    \item Quality of Service
+    \end{itemize}
+  \item Other workload types (not only batch tasks)
+  \item Dimensioning of IT infrastructure (servers considering the
+    footprint of manufacturing, new generations that are more efficient)
+
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sponsor acknowledgments}
+
+  This work has been partially supported by the LabEx PERSYVAL-Lab (``ANR-11-LABX-0025-01'') funded by the French program \textit{Investissement d'avenir}, by grant \#2021/06867-2, São Paulo Research Foundation (FAPESP), by the EIPHI Graduate school (contract ``ANR-17-EURE-0002''), by the EuroHPC EU Regale project (g.a. 956560), and by the ANR DATAZERO2 (contract ``ANR-19-CE25-0016'') project.
+
+\end{frame}
+
+\begin{frame}{Thank you!}
+  
+  \textbf{Towards low-carbon globally distributed clouds}
+  
+  \begin{center}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.25\textwidth]{images/qr-code.png}
+      \caption{Supplemental material for the paper: M. Vasconcelos, D. Cordeiro, G. Da Costa, F. Dufossé, J.-M. Nicod, and V. Rehn-Sonigo, ``Optimal sizing of a globally distributed low carbon cloud federation''. \textit{In: 2023 23nd IEEE International Symposium on Cluster, Cloud and Internet Computing (CCGrid), Bengaluru, India, 2023.}}
+    \end{figure}
+
+    \textbf{Contact:}
+    
+    \alert{miguel.silva-vasconcelos@inria.fr}
+
+  \end{center}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]  
+  \printbibliography
+\end{frame}
+
+
+\end{document}
