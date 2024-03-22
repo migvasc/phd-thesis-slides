@@ -1,0 +1,342 @@
+Cerca de 22 slides ....
+2 min por slide ...
+
+
+LER TESE
+
+- Intro
+  > Cloud e impacto
+  - img dos DCs geograficamente distribuidos bonitinhos..
+  1
+
+  > Estrategias das plataformas, integram energia, academico, uncerto 
+  2
+  
+> Carbon aware estrategias
+  3
+     -> Follow-the-renewables e 
+     -> Sizing/Dimensioning
+
+- Follow-the-renewables
+  
+  1 slide 
+
+  O q eh o mais importante ...
+
+  Falar dos impactos indiretos na energia e no consumo ..
+
+  Experimentos ->
+  Resultados ->
+
+  Definir o q é ... 
+
+  -> algoritmo, deixar claro q eh baseado no nemesis, so alterei   algumas poucas coisas
+   resultados
+   2 slides
+
+ 
+- Sizing 
+
+  -> CCGRID
+
+  Coloco ou nao as variaveis? Input, output... 
+  Talvez so pra dar uma ideia
+  
+  -> Long term 
+
+
+- Conclusao
+  2 slides
+
+
+
+Usar os mesmos dados pra la, talvez dps atualizar os valores, isso n muda o resultado final ...
+
+Qto antes corrigir, melhor ...
+
+Oq focar em melhorar na apresentacao:
+
+Oq foi falado pela anne cecile
+
+pq n usou outras paradas de sizing, outros baselines...
+
+Na epoca nao encontramos outros estudos de sizing para o contexto 
+
+De dcs...
+
+Fizemos cenarios especificos pra tentar simular esses baselines...
+Pq o experimento falou pra trocar de servidores ...
+Pq n usou medicoes reais para as vms??
+
+
+Explicar o algoritmo ...
+
+O uso de energia renovavel ... pq usamos somente infraestruturas homogeneas ...
+Dados de consumo de energia... tb cluster sao homogeneos... nao
+Afetaria os experimentos, mas pq no primeiro momento focamos no
+Problema de congestao de rede ...
+Baseado em uma plataforma real... varios clusters homogeneos ...
+
+
+Ver como rodar sem gurobi ...
+
+Criar os nix shells e tals ...
+
+Correcoes faladas ...
+
+
+Artefato reprodutivel da parte 2 ...
+
+Codigo melhorou, agr falta oq???
+
+
+-> Ver secao por sessao ...
+
+5.2
+
+Perguntas: O que mudaria no contexto de dcs super geograficamente distribuidos ?
+
+Servidores heterogeneos?
+
+Dado uma carga de trabalho, como pode ser feito isso      ->
+
+Eh uma nocao inicial, o algoritmo de escalonamento local  ->
+
+
+Intro ->
+
+Vantagens da cloud ->
+
+On demand, services applications ->
+
+vs
+
+Environmental impact ... 
+
+Research and industry ->
+
+Problemas ...
+
+Já em uso pelos grandes operadores ...
+
+Falar que
+
+Estrategias ...
+
+Follow-the-renewables
+
+and
+
+Sizing ...
+
+Contributions of this thesis ...
+
+Two main contributions ...
+
+Pq n usou baselines ...
+
+Não encontramos na epoca baselines referente ao contexto de DCs ...
+
+q levasse em conta a possibilidade de usar energia da grid e dos 
+
+Esses dois outros cenarios foi a forma de simular o baseline ...
+
+Um em que só utiliza energia de grid e outro em q so utilisa energia renovavel ...
+
+1h, variacoes...
+
+Super fine-grain approach...
+
+Oq faria diferente?
+
+Follow the renewables
+
+Mais workloads, mais baselines,
+
+outros pontos de migracao...
+
+
+Tentar integrar o longo term com o short term...
+
+temos o sizing de longo prazo, ok, e como isso se comportaria com o
+sizing de curto prazo ...
+
+Sizing
+
+-> mais workloads, cenarios,
+
+-> Sempre comecar a reproducibilidade
+
+
+
+What phases of the life cycle are accounted in this data ???
+Battery, PVs...
+
+
+Talvez nao tinha tanta variabilidade, por isso q fez o numero alto de migracoes...
+Dados do mesmo lugar...
+
+
+
+Reviews 
+
+
+*PATRICIA*
+
+- table 4.6 page 74 shows « Results of the sustainability metrics for
+the experiments » (CO2 savings for each location. Mais dans le texte il
+est dit « We use the CO 2 savings metric to analyze the reduction of the
+carbon footprint of each DC between the hybrid scenario (PV + bat +
+grid) and the scenario where
+
+power comes exclusively from the regular grid, and the results are shown
+in Table 4.6. »
+
+In table 4.6 there is no comparison of scenarios
+
+- page 102 fig 5.8  et 5.9: c’est quoi la différence entre les 4 courbes ?
+
+- page 105 section 5.5.1 : le modèle est je pense inspiré des travaux de
+Marwa Haddad
+
+/Combined IT and Power Supply Infrastructure Sizing for Standalone Green Data Centers/
+
+/Sustainable Computing : Informatics and Systems/, 2021, pp.100505.
+
+- page 109 « that makes the battery start empty » => starts
+
+- page 113 il manque les axes des dollars sur les figures 5.10 ; 5.11 et
+5.12
+
+- dans le chapitre 5 aussi des notations ne sont pas introduites
+
+- page 126 le texte et la figure 5.18 ne sont pas cohérents
+
+« Finally, in terms of total
+
+CO 2 emissions, the optimal solution is 13.4% better than the solution
+that only has
+
+information about the current year, as can be seen in Table 5.18. »
+
+- page 128 il me semble qu’il se contredit « This could be explained by
+
+the fact that Johannesburg is the location that receives the most
+solar irradiation
+
+throughout the year, so it could compensate for the decrease in PV area
+in the other
+
+locations. Regarding the batteries, the reduction in Pune, Seoul, and
+Singapore
+
+could be justified by the smaller PV area, as there will be less energy
+to store.
+
+On the other hand, we see an increase in battery capacity at the other
+locations. This
+
+could be justified by having a smaller PV area so the renewable energy
+cannot be
+
+wasted. Finally, including the life cycle aspect makes our modeling more
+realistic,
+
+and the emissions are still better than the scenario where only power
+from the local
+
+electricity grid is used in terms of carbon footprint—81% in the
+scenario with PV
+
+and batteries. »
+
+
+
+urait pu inclure des éléments sur l’ACV pour introduire les
+problématiques de dimensionnement long-terme qui sont étudiées dans le
+dernier chapitre.
+
+
+
+ADD mais referencias de carbon footprint, life cycle...
+
+Falar do trabalho do CAT, perfeito
+So falo q usei o modelo, mas n explico ...
+
+
+Le chapitre aurait pu inclure des éléments sur l’ACV pour introduire les
+problématiques de dimensionnement long-terme qui sont étudiées dans le
+dernier chapitr
+
+
+
+Pour simuler des productions différentes par les différents centres de calcul répartis
+géographiquement, il utilise une semaine de production différente pour chaque DC. Le choix
+de la semaine n’est pas discuté, cela va avoir un impact sur les résultats. Il aurait pu être
+pertinent de couvrir les différents climats des différents emplacements de la fédération de
+clouds. Je pense que d’autres sources de données pour la production de renouvelable auraient
+permis de montrer les résultats d’une fédération de clouds répartis dans plusieurs pays (par
+exemple MERRA, comme il le fait dans le chapitre 4). Pour évaluer les résultats, il se
+compare à des baselines de la littérature : algorithmes WSNB et FollowMe@Source avec ses
+deux variantes FollowMe@S Intra et FollowMe@S Inter.
+Dans l’analyse des résultats, les algorithmes présentés ne sont pas toujours les mêmes :
+comparaison entre NEMESIS et c-NEMESIS ou incluant aussi FollowMe@S Intra et
+FollowMe@S Inter ou une comparaison avec WSNB. Il aurait été bien d’avoir les mêmes
+algorithmes pour toutes les expériences présentées.
+
+Les résultats et l’approche sont de qualité mais ils sont très contextualisés. Il manquerait des
+évaluations permettant d’évaluer la variabilité du dimensionnement en prenant en compte des
+années différentes pour la météo, des workloads différents, des répartitions différentes des
+fournisseurs de cloud. 
+
+
+
+**JULITA**
+
+
+scheduling, the related work could be a bit more generic and not so focused in cloud computing. The scalability of the experiments done in chapter 3
+are in the size of a modern data center, so scheduling policies
+
+
+applied in and other works based on migrations  could be also mentioned in the related work. I’m not saying the experimentation should be changed, but I think
+the related work regarding the contribution in chapter 3 could be a bit more generic
+
+
+
+
+From a technical point of view, the main weakness of the thesis, in my opinion, is the experimentation done in
+chapter 3. The fact the cluster has been configured as homogeneous nodes reduces the applicability of the
+solution. The thesis is focused on cloud scenarios with geographically distributed data centers. In these contexts,
+the simplification of assuming homogeneous servers is, in my opinion, not realistic. I think author should, at
+least, motivate why this decision and how having a heterogeneous cloud would affect the applicability of the
+algorithm. Moreover, author refers many times in the introduction the context of “geographically distributed DCs”
+and the idea of migrating to make an efficient utilization of green energy based on different productions but also
+day periods. However, if I understand correctly from the experiments, these differences are not significant given
+all the DCs are in Europe, so with minor variations (or at least this is what I have assumed). If that’s the case,
+author should clarify this particular topic is going to be used in the second part of the thesis but not too much in
+the first one (or nothing). In the algorithm, I would like author clarifies if they are taking into account the availability
+of green energy for the whole requested time of the job or only the availability at submission time. This point is
+not 100% clear in my opinion. I was assuming they are only considering the available one at submission time
+because otherwise there will be less use cases for migration. Again, a
+clarification would help.
+
+
+s a
+personal comment, given my personal experience, I think it’s not realistic to think a Data Center is going to be
+extended in a per-year basis. These changes include lot of logistics problems from official procurements, money
+gathering, providers selection, installation, disruptions in the power production affecting the DC etc etc. Said
+that, I think this doesn’t invalidate the work, just could be something else to take into account, for example,
+assuming extensions will be done every 3-4 years rather than every
+year
+
+
+
+
+e simplifications of the evaluation. The second part of the thesis is like a big contribution,
+even though it is several chapters, and I would suggest author to take that into account in the defense. What I
+mean is, contribution in chapter 5 needs previous models but a proposal to compute the size of the green power
+supply cannot be done using current workload, it must use a projection for the future and it is presented at the
+end. So, the work done in chapter 4 should be introduced as the first step for chapter 5, not as full contribution
+by itself.
+It's a pity the thesis only has 2 publications because I think there is a very interesting work and I hope author will
+success in the last publications he’s preparing
